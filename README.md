@@ -1,47 +1,43 @@
-# [Attendence Calculator] 🎯
+# Attendence Calculator 🎯
 
 
-## Basic Details
-### Team Name: [Name]
+## website to calculate attendence on etlab
+### Team Name: Whit and Whimpsy
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Diya joy - Sahrdaya College of Engineering and Technology(Autonomous)
+- Member 2: Angel rose - Sahrdaya College of Engineering and Technology(Autonomous)
+- Member 3: Ann rose - Sahrdaya College of Engineering and Technology(Autonomous)
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+https://attendance-calculator-beta.vercel.app/
 
 ### Project Description
-[2-3 lines about what your project does]
+This project requires login using Et-Lab credentials and lists the current attendance report, including how many classes need to be attended and how many can be missed to reach a particular percentage.
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+To bunk classes
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+Calculate how many class can be bunked using power of maths
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- html,css,js, python
+- tailwind
+- flask
+- vercel for hosting
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+git clone https://github.com/Diya-Joy/Attendence
+cd Attendence
 
 # Run
-[commands]
+python app.py
 
 ### Project Documentation
 For Software:
