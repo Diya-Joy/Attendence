@@ -43,16 +43,19 @@ python app.py
 For Software:
 
 # Screenshots (Add at least 3)
-![https://github.com/Diya-Joy/Attendence/blob/main/ss/Screenshot%202025-02-02%20100710.png?raw=true]
+![login page](https://github.com/Diya-Joy/Attendence/blob/main/ss/Screenshot%202025-02-02%20100710.png?raw=true)
+
 *login page*
 
-![https://github.com/Diya-Joy/Attendence/blob/main/ss/Screenshot%202025-02-02%20100801%201.png?raw=true]
+![display page](https://github.com/Diya-Joy/Attendence/blob/main/ss/Screenshot%202025-02-02%20100801%201.png?raw=true)
+
 *display page*
 
 
 
 # Build Photos
-!https://github.com/Diya-Joy/Attendence/blob/main/ss/team.jpg?raw=true]
+## build team
+![Team Image](https://github.com/Diya-Joy/Attendence/blob/main/ss/team.jpg?raw=true)
 
 
 ### Project Demo
