@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col items-center p-0">
+    <!-- Navbar -->
+    <nav class="w-full p-4 flex justify-between items-center shadow-md" style="background-color: rgb(24 38 104);">
+        <h1 class="text-lg font-bold text-white">ET Lab Attendance</h1>
+        <a href="/" class="bg-white text-blue-800 hover:bg-gray-100 px-4 py-2 rounded-md">Logout</a>
+    </nav>
+    
+    <div class="bg-gray-100 p-6 rounded-lg shadow-lg w-full max-w-full mt-4">
+        <h2 class="text-xl font-semibold mb-2">Name: {{ name }}</h2>
+        <h2 class="text-xl font-semibold mb-2">Uni Reg No: {{ Uni_Reg_No }}</h2>
+        <h2 class="text-xl font-semibold mb-4">Roll No: {{ Roll_no }}</h2>
+        <h1 class="text-2xl font-bold mb-4">Attendance Report</h1>
+
+        <!-- Target Percentage Form -->
+        <form id="target-form" class="mb-4" onsubmit="return false;">
+            <label for="targetPercentage" class="block text-lg mb-2">Set Target Percentage:</label>
+            <div class="flex gap-2">
+                <input type="number" id="targetPercentage" class="w-full p-2 text-gray-900 rounded-md border border-gray-300" placeholder="Enter target percentage" min="0" max="100" value="{{ target_percentage }}">
+                <button type="button" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" onclick="submitTarget()">Set</button>
+            </div>
+        </form>
+
+        <ul class="space-y-2">
+            {% for line in data_lines %}
+                <li class="bg-gray-200 p-3 rounded-lg shadow">{{ line.strip() }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+
+
+    <script>
+        function submitTarget() {
+            const targetPercentage = document.getElementById("targetPercentage").value;
+            if (targetPercentage) {
+                const sanitizedValue = targetPercentage.replace(/%/g, '');
+                window.location.href = `/display?p=${sanitizedValue}`;
+            } else {
+                alert("Please enter a valid target percentage.");
+            }
+        }
+
+        document.getElementById("targetPercentage").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                submitTarget();
+            }
+        });
+    </script>
+</body>
+</html>

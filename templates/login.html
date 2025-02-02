@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f1f5f9; /* Light background color */
+            color: #1f2937; /* Dark text color */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed w-full top-0 z-10" style="background-color: rgb(24 38 104);">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <a class="text-xl font-semibold text-white" href="#">ET Lab Attendance</a>
+
+            </div>
+        </div>
+    </nav>
+    
+    <div class="flex justify-center items-center min-h-screen pt-20"> <!-- Adjusted to account for fixed navbar -->
+        <!-- Logo above the card (mobile and desktop) -->
+
+        <div class="flex flex-col lg:flex-row bg-white shadow-xl rounded-lg max-w-4xl w-full">
+            <!-- Left Section (Login Form) -->
+            <div class="w-full lg:w-1/2 p-8">
+                <h3 class="text-center text-3xl font-semibold mb-6">Login</h3>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} mb-4" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <form action="{{ url_for('login') }}" method="POST">
+                    <div class="mb-6">
+                        <label for="username" class="block text-lg font-medium text-gray-700">Username:</label>
+                        <input type="text" id="username" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your username" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block text-lg font-medium text-gray-700">Password:</label>
+                        <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Login</button>
+                </form>
+            </div>
+            <!-- Right Section (Image) - Desktop -->
+            <div class="hidden lg:block w-1/2">
+                <img src="{{ url_for('static', filename='soarhigh.jpg') }}" alt="Sahrdaya" class="object-cover w-full h-full rounded-r-lg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
