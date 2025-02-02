@@ -43,48 +43,23 @@ python app.py
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![https://github.com/Diya-Joy/Attendence/blob/main/ss/Screenshot%202025-02-02%20100710.png?raw=true]
+*login page*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![https://github.com/Diya-Joy/Attendence/blob/main/ss/Screenshot%202025-02-02%20100801%201.png?raw=true]
+*display page*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 # Build Photos
-![Team](Add photo of your team here)
+!https://github.com/Diya-Joy/Attendence/blob/main/ss/team.jpg?raw=true]
 
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - [Name 1]: [Specific contributions]
@@ -92,4 +67,4 @@ For Hardware:
 - [Name 3]: [Specific contributions]
 
 ---
-Made with ❤️ at TinkerHub
+Made with ❤️ at TinkerHub fix the images part
